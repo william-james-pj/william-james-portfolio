@@ -7,11 +7,7 @@ export const Container = styled.div`
   padding: 2rem 0 4rem;
 
   ${respondToUp.sm`
-    padding: 2rem 0 4rem;
-  `}
-
-  ${respondToUp.md`
-    padding: 0;
+    padding: 6rem 0 4rem;
   `}
 `;
 
@@ -37,10 +33,6 @@ export const HomeContent = styled.div`
   ${respondToUp.xs`
     grid-template-columns: max-content 1fr 1fr;
     padding-top: 3.5rem;
-  `}
-
-  ${respondToUp.md`
-    padding-top: 8rem;
   `}
 `;
 
