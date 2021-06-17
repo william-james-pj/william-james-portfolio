@@ -57,6 +57,10 @@ export const NavMenu = styled.div`
     transition: 0.3s;
   `}
 
+  ${respondToDown.xs`
+    padding: 2rem 0.25rem 4rem;
+  `}
+
   ${respondToUp.sm`
     margin-left: auto;
   `}
@@ -67,6 +71,10 @@ export const NavList = styled.ul`
     display: grid;
     gap: 2rem;
     grid-template-columns: repeat(3, 1fr);
+  `}
+
+  ${respondToDown.xs`
+    column-gap: 0;
   `}
 
   ${respondToUp.sm`
