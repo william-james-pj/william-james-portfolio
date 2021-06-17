@@ -1,7 +1,7 @@
 import styled from 'styled-components';
-import * as colors from '../../config/colors';
-import * as fonts from '../../config/fonts';
-import { respondToDown, respondToUp } from '../../config/respondTo';
+import * as colors from '../../../config/colors';
+import * as fonts from '../../../config/fonts';
+import { respondToDown, respondToUp } from '../../../config/respondTo';
 
 export const Container = styled.div`
   width: 100%;
