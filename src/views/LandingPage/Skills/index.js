@@ -14,11 +14,11 @@ const data = {
       number: '90%',
     },
     {
-      name: 'HTML',
+      name: 'CSS',
       number: '90%',
     },
     {
-      name: 'HTML',
+      name: 'JS',
       number: '90%',
     },
   ],
@@ -28,15 +28,15 @@ const data1 = {
   title: 'Backend',
   list: [
     {
-      name: 'HTML',
+      name: 'Firebase',
       number: '90%',
     },
     {
-      name: 'HTML',
+      name: 'Nodejs',
       number: '70%',
     },
     {
-      name: 'HTML',
+      name: 'MySQL',
       number: '50%',
     },
   ],

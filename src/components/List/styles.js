@@ -48,7 +48,6 @@ export const Title = styled.div`
 `;
 
 export const Name = styled.p`
-  font-size: ${fonts.normal};
   font-weight: 500;
   color: ${colors.textThirdColor};
 `;

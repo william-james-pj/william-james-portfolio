@@ -33,11 +33,17 @@ export const NavContainer = styled.div`
     height: calc(3rem + 1.5rem);
     column-gap: 1rem;
   `}
+
+  ${respondToUp.md`
+    margin-left: auto;
+    margin-right: auto;
+  `}
 `;
 
 export const NavLogo = styled.a`
   font-weight: 500;
   color: ${colors.textPrimaryColor};
+  cursor: pointer;
 
   :hover {
     color: ${colors.secondColor};

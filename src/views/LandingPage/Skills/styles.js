@@ -5,6 +5,10 @@ import { respondToUp } from '../../../config/respondTo';
 
 export const Container = styled.div`
   padding: 2rem 0 4rem;
+
+  ${respondToUp.sm`
+    padding: 6rem 0 4rem;
+  `}
 `;
 
 export const Title = styled.p`
@@ -32,8 +36,13 @@ export const SkillsContainer = styled.div`
     grid-template-columns: repeat(2, 1fr);
   `}
 
-  ${respondToUp.md`
+  ${respondToUp.sm`
     margin-left: auto;
     margin-right: auto;
+    padding-inline: 1.5rem;
+  `}
+
+  ${respondToUp.md`
+    padding-inline: 0;
   `}
 `;

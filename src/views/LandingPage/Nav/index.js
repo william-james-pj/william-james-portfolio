@@ -35,7 +35,7 @@ function Nav() {
   return (
     <Container>
       <NavContainer>
-        <NavLogo>William</NavLogo>
+        <NavLogo>William James</NavLogo>
         <NavMenu menuOpen={menuOpen}>
           <NavList>
             <NavItem onClick={handleMenu}>
@@ -80,7 +80,7 @@ function Nav() {
             </NavItem>
           </NavList>
           <NavClose onClick={handleMenu}>
-            <FontAwesomeIcon icon={faTimes} size="md" />
+            <FontAwesomeIcon icon={faTimes} size="1x" />
           </NavClose>
         </NavMenu>
 
