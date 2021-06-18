@@ -1,7 +1,8 @@
-import Nav from './Nav/index';
-import Home from './Home/index';
-import About from './About/index';
-import Skills from './Skills/index';
+import Nav from './Nav';
+import Home from './Home';
+import About from './About';
+import Skills from './Skills';
+import Qualification from './Qualification';
 
 function LandingPage() {
   return (
@@ -10,6 +11,7 @@ function LandingPage() {
       <Home />
       <About />
       <Skills />
+      <Qualification />
     </>
   );
 }
