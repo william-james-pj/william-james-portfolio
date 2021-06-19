@@ -5,6 +5,7 @@ import Skills from './Skills';
 import Qualification from './Qualification';
 import Portfolio from './Portfolio';
 import Blog from './Blog';
+import Footer from './Footer';
 
 function LandingPage() {
   return (
@@ -16,6 +17,7 @@ function LandingPage() {
       <Skills />
       <Qualification />
       <Portfolio />
+      <Footer />
     </>
   );
 }
