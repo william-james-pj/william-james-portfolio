@@ -44,6 +44,7 @@ export const Title = styled.p`
   font-weight: 700;
   color: ${colors.textSecondColor};
   margin-bottom: 0.5rem;
+  user-select: none;
 
   ${respondToDown.xs`
     margin-bottom: 1rem;
@@ -56,6 +57,7 @@ export const Description = styled.p`
   font-size: ${fonts.normal};
   color: ${colors.textThirdColor};
   line-height: 140%;
+  user-select: none;
   ${respondToUp.xs`
     text-align: left;
   `}

@@ -25,7 +25,7 @@ export const ImgContainer = styled.div`
 
   ${respondToDown.xs`
     margin-inline: auto;
-    width: 60%;
+    width: 90%;
   `}
 `;
 
@@ -50,6 +50,7 @@ export const Title = styled.p`
   font-weight: 700;
   color: ${colors.textSecondColor};
   margin-bottom: 0.5rem;
+  user-select: none;
 
   ${respondToDown.xs`
     margin-bottom: 1rem;
@@ -62,6 +63,7 @@ export const Description = styled.p`
   font-size: ${fonts.normal};
   color: ${colors.textThirdColor};
   line-height: 140%;
+  user-select: none;
   ${respondToUp.xs`
     text-align: left;
   `}
@@ -89,6 +91,7 @@ export const ButtonLink = styled.a`
   padding: 1rem;
   border-radius: 0.5rem;
   font-weight: 500;
+  -webkit-tap-highlight-color: transparent;
 
   :hover {
     background-color: ${colors.thirdColor};
@@ -101,6 +104,7 @@ export const Icon = styled.span`
   margin-left: 2rem;
   transition: 0.3s;
   cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
 
   :hover {
     color: ${colors.colorBar};

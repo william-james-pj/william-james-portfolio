@@ -44,6 +44,8 @@ export const NavLogo = styled.a`
   font-weight: 500;
   color: ${colors.textPrimaryColor};
   cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  user-select: none;
 
   :hover {
     color: ${colors.secondColor};
@@ -89,7 +91,9 @@ export const NavList = styled.ul`
   `}
 `;
 
-export const NavItem = styled.li``;
+export const NavItem = styled.li`
+  -webkit-tap-highlight-color: transparent;
+`;
 
 export const NavIcons = styled.div`
   margin-bottom: 5px;
@@ -107,6 +111,7 @@ export const NavLink = styled.a`
   font-weight: 500;
 
   cursor: pointer;
+  user-select: none;
 
   :hover {
     color: ${colors.secondColor};
@@ -120,6 +125,7 @@ export const NavClose = styled.div`
   font-size: 1.5rem;
   cursor: pointer;
   color: ${colors.textPrimaryColor};
+  -webkit-tap-highlight-color: transparent;
 
   :hover {
     color: ${colors.secondColor};
@@ -138,6 +144,7 @@ export const NavToggle = styled.div`
 
   font-size: 1.1rem;
   cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
 
   :hover {
     color: ${colors.secondColor};

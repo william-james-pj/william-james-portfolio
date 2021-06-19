@@ -51,6 +51,8 @@ export const Button = styled.div`
   color: ${(props) =>
     props.active ? colors.textSecondColor : colors.secondColor};
 
+  -webkit-tap-highlight-color: transparent;
+
   :hover {
     color: ${colors.secondColor};
   }

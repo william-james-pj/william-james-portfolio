@@ -92,6 +92,7 @@ export const HomeTitle = styled.p`
   color: ${colors.textPrimaryColor};
   font-weight: 700;
   margin-bottom: 0.5rem;
+  user-select: none;
 `;
 
 export const HomeSubTitle = styled.p`
@@ -99,12 +100,14 @@ export const HomeSubTitle = styled.p`
   color: ${colors.textSecondColor};
   font-weight: 500;
   margin-bottom: 0.75rem;
+  user-select: none;
 `;
 
 export const HomeDescription = styled.p`
   font-size: ${fonts.sm};
   color: ${colors.textThirdColor};
   margin-bottom: 2rem;
+  user-select: none;
 `;
 
 export const HomeScroll = styled.div`
@@ -117,6 +120,7 @@ export const HomeScrollButton = styled.a`
   color: ${colors.secondColor};
   transition: 0.3s;
   cursor: pointer;
+  user-select: none;
 
   display: inline-flex;
   align-items: center;

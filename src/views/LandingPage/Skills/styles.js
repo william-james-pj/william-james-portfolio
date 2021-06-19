@@ -17,6 +17,7 @@ export const Title = styled.p`
   font-weight: 700;
   text-align: center;
   margin-bottom: 3rem;
+  user-select: none;
 
   ${respondToUp.sm`
     margin-bottom: 4rem;

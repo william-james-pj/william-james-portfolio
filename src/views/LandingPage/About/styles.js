@@ -17,6 +17,7 @@ export const AboutTitle = styled.p`
   font-weight: 700;
   text-align: center;
   margin-bottom: 3rem;
+  user-select: none;
 
   ${respondToUp.sm`
     margin-bottom: 4rem;
@@ -69,6 +70,7 @@ export const AboutDescription = styled.p`
   font-size: ${fonts.normal};
   color: ${colors.textSecondColor};
   line-height: 140%;
+  user-select: none;
   ${respondToUp.xs`
     text-align: left;
   `}
@@ -94,6 +96,8 @@ export const AboutButtonLink = styled.a`
   padding: 1rem;
   border-radius: 0.5rem;
   font-weight: 500;
+  -webkit-tap-highlight-color: transparent;
+  user-select: none;
 
   :hover {
     background-color: ${colors.thirdColor};

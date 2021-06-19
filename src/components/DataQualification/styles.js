@@ -18,6 +18,7 @@ export const Title = styled.p`
   font-weight: 500;
   color: ${colors.textSecondColor};
   margin-bottom: 0.25rem;
+  user-select: none;
 `;
 
 export const Subtitle = styled.span`
@@ -25,11 +26,13 @@ export const Subtitle = styled.span`
   font-size: ${fonts.sm};
   color: ${colors.textThirdColor};
   margin-bottom: 1rem;
+  user-select: none;
 `;
 
 export const Calendar = styled.div`
   font-size: ${fonts.xs};
   color: ${colors.textFourthColor};
+  user-select: none;
 `;
 
 export const Icon = styled.span`
@@ -54,6 +57,7 @@ export const Line = styled.span`
   height: 100%;
   background-color: ${colors.secondColor};
   transform: translate(6px, -7px);
+  display: ${(props) => (props.active ? '' : 'none')};
 `;
 
 export const Trash = styled.div`

@@ -13,4 +13,5 @@ export const Icon = styled.span`
   font-size: 2.5rem;
   color: ${colors.secondColor};
   cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
 `;

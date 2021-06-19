@@ -84,6 +84,7 @@ function Qualification() {
                   key={item.title + index}
                   data={item}
                   right={index}
+                  last={++index === education.length}
                 />
               );
             })}
@@ -95,6 +96,7 @@ function Qualification() {
                   key={item.title + index}
                   data={item}
                   right={index}
+                  last={++index === work.length}
                 />
               );
             })}

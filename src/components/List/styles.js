@@ -3,7 +3,9 @@ import * as colors from '../../config/colors';
 import * as fonts from '../../config/fonts';
 // import { respondToDown, respondToUp } from '../../config/respondTo';
 
-export const Content = styled.div``;
+export const Content = styled.div`
+  -webkit-tap-highlight-color: transparent;
+`;
 
 export const Header = styled.div`
   display: flex;
@@ -28,6 +30,7 @@ export const HeaderTitle = styled.p`
   font-size: ${fonts.md};
   font-weight: 700;
   color: ${colors.textSecondColor};
+  user-select: none;
 `;
 
 export const ListContainer = styled.div`
@@ -50,10 +53,12 @@ export const Title = styled.div`
 export const Name = styled.p`
   font-weight: 500;
   color: ${colors.textThirdColor};
+  user-select: none;
 `;
 
 export const Number = styled.span`
   color: ${colors.textThirdColor};
+  user-select: none;
 `;
 
 export const Bar = styled.div`

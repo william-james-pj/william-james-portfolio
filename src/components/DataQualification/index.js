@@ -17,7 +17,7 @@ import {
   Trash,
 } from './styles';
 
-function DataQualification({ data, right }) {
+function DataQualification({ data, right, last }) {
   return (
     <Container>
       <Data order={right % 2 === 0 ? 0 : 1}>
@@ -32,7 +32,7 @@ function DataQualification({ data, right }) {
       </Data>
       <RounderContainer>
         <Rounder></Rounder>
-        <Line></Line>
+        <Line active={last ? 0 : 1}></Line>
       </RounderContainer>
       <Trash order={right % 2 === 0 ? 0 : 1}></Trash>
     </Container>
@@ -42,6 +42,7 @@ function DataQualification({ data, right }) {
 DataQualification.propTypes = {
   data: PropTypes.object.isRequired,
   right: PropTypes.number.isRequired,
+  last: PropTypes.number.isRequired,
 };
 
 export default DataQualification;
