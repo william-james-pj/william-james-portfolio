@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import * as colors from '../../config/colors';
 import * as fonts from '../../config/fonts';
 // import { respondToDown, respondToUp } from '../../config/respondTo';
 
@@ -16,20 +15,20 @@ export const Header = styled.div`
 
 export const Icon = styled.span`
   font-size: 2rem;
-  color: ${colors.secondColor};
+  color: ${({ theme }) => theme.secondColor};
   margin-right: 0.75rem;
 `;
 
 export const Arrow = styled.span`
   font-size: 2rem;
-  color: ${colors.secondColor};
+  color: ${({ theme }) => theme.secondColor};
   margin-left: auto;
 `;
 
 export const HeaderTitle = styled.p`
   font-size: ${fonts.md};
   font-weight: 700;
-  color: ${colors.textSecondColor};
+  color: ${({ theme }) => theme.h2};
   user-select: none;
 `;
 
@@ -52,19 +51,19 @@ export const Title = styled.div`
 
 export const Name = styled.p`
   font-weight: 500;
-  color: ${colors.textThirdColor};
+  color: ${({ theme }) => theme.h3};
   user-select: none;
 `;
 
 export const Number = styled.span`
-  color: ${colors.textThirdColor};
+  color: ${({ theme }) => theme.h3};
   user-select: none;
 `;
 
 export const Bar = styled.div`
   height: 5px;
   border-radius: 0.25rem;
-  background-color: ${colors.colorBar};
+  background-color: ${({ theme }) => theme.secondColorLighter};
 `;
 
 export const Percentage = styled.span`
@@ -72,5 +71,5 @@ export const Percentage = styled.span`
   border-radius: 0.25px;
 
   display: block;
-  background-color: ${colors.secondColor};
+  background-color: ${({ theme }) => theme.secondColor};
 `;

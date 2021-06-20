@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import * as colors from '../../../config/colors';
 import * as fonts from '../../../config/fonts';
 import { respondToDown, respondToUp } from '../../../config/respondTo';
 
@@ -49,11 +48,11 @@ export const HomeSocial = styled.div`
 
 export const HomeSocialLink = styled.a`
   font-size: 1.25rem;
-  color: ${colors.secondColor};
+  color: ${({ theme }) => theme.secondColor};
   cursor: pointer;
 
   :hover {
-    color: ${colors.textFourthColor};
+    color: ${({ theme }) => theme.secondColorAlt};
   }
 `;
 
@@ -66,7 +65,7 @@ export const HomeImg = styled.div`
 
 export const HomeBlob = styled.svg`
   width: 200px;
-  fill: ${colors.secondColor};
+  fill: ${({ theme }) => theme.secondColor};
 
   ${respondToUp.xs`
     width: 270px;
@@ -89,7 +88,7 @@ export const HomeData = styled.div`
 
 export const HomeTitle = styled.p`
   font-size: ${fonts.lg};
-  color: ${colors.textPrimaryColor};
+  color: ${({ theme }) => theme.h1};
   font-weight: 700;
   margin-bottom: 0.5rem;
   user-select: none;
@@ -97,7 +96,7 @@ export const HomeTitle = styled.p`
 
 export const HomeSubTitle = styled.p`
   font-size: ${fonts.md};
-  color: ${colors.textSecondColor};
+  color: ${({ theme }) => theme.h2};
   font-weight: 500;
   margin-bottom: 0.75rem;
   user-select: none;
@@ -105,7 +104,7 @@ export const HomeSubTitle = styled.p`
 
 export const HomeDescription = styled.p`
   font-size: ${fonts.sm};
-  color: ${colors.textThirdColor};
+  color: ${({ theme }) => theme.h3};
   margin-bottom: 2rem;
   user-select: none;
 `;
@@ -117,7 +116,7 @@ export const HomeScroll = styled.div`
 `;
 
 export const HomeScrollButton = styled.a`
-  color: ${colors.secondColor};
+  color: ${({ theme }) => theme.secondColor};
   transition: 0.3s;
   cursor: pointer;
   user-select: none;
@@ -140,7 +139,7 @@ export const HomeScrollMouse = styled.div`
 
 export const HomeScrollName = styled.span`
   font-size: ${fonts.sm};
-  color: ${colors.textPrimaryColor};
+  color: ${({ theme }) => theme.h1};
   font-weight: 500;
   margin-right: 0.25rem;
   margin-left: 0.5rem;

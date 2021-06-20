@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import * as colors from '../../../config/colors';
 import * as fonts from '../../../config/fonts';
 import { respondToUp } from '../../../config/respondTo';
 
@@ -8,7 +7,7 @@ export const Container = styled.div`
 `;
 
 export const FooterBg = styled.div`
-  background-color: ${colors.secondColor};
+  background-color: ${({ theme }) => theme.containerColor};
   padding: 2rem 0 3rem;
 
   ${respondToUp.sm`
@@ -44,12 +43,12 @@ export const Data = styled.div``;
 export const Title = styled.p`
   font-size: ${fonts.normal};
   margin-bottom: 0.25rem;
-  color: ${colors.white};
+  color: ${({ theme }) => theme.white};
 `;
 
 export const Subtitle = styled.span`
   font-size: ${fonts.sm};
-  color: ${colors.white};
+  color: ${({ theme }) => theme.white};
 `;
 
 export const Links = styled.ul`
@@ -66,9 +65,9 @@ export const Links = styled.ul`
 export const Item = styled.li``;
 
 export const Link = styled.a`
-  color: ${colors.white};
+  color: ${({ theme }) => theme.white};
   :hover {
-    color: ${colors.thirdColor};
+    color: ${({ theme }) => theme.secondColorAlt};
   }
 `;
 
@@ -83,17 +82,17 @@ export const Socials = styled.div`
 export const Social = styled.div`
   font-size: 1.25rem;
   margin-right: 1.5rem;
-  color: ${colors.white};
+  color: ${({ theme }) => theme.white};
 
   :hover {
-    color: ${colors.thirdColor};
+    color: ${({ theme }) => theme.secondColorAlt};
   }
 `;
 
 export const Copy = styled.p`
   font-size: ${fonts.sm};
   text-align: center;
-  color: ${colors.primaryColor};
+  color: ${({ theme }) => theme.white};
   margin-top: 3rem;
 
   ${respondToUp.sm`

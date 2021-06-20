@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import * as colors from '../../config/colors';
 import * as fonts from '../../config/fonts';
 // import { respondToDown, respondToUp } from '../../config/respondTo';
 
@@ -16,7 +15,7 @@ export const Data = styled.div`
 export const Title = styled.p`
   font-size: ${fonts.normal};
   font-weight: 500;
-  color: ${colors.textSecondColor};
+  color: ${({ theme }) => theme.h2};
   margin-bottom: 0.25rem;
   user-select: none;
 `;
@@ -24,14 +23,14 @@ export const Title = styled.p`
 export const Subtitle = styled.span`
   display: inline-block;
   font-size: ${fonts.sm};
-  color: ${colors.textThirdColor};
+  color: ${({ theme }) => theme.h3};
   margin-bottom: 1rem;
   user-select: none;
 `;
 
 export const Calendar = styled.div`
   font-size: ${fonts.xs};
-  color: ${colors.textFourthColor};
+  color: ${({ theme }) => theme.h4};
   user-select: none;
 `;
 
@@ -47,7 +46,7 @@ export const Rounder = styled.span`
   display: inline-block;
   width: 13px;
   height: 13px;
-  background-color: ${colors.secondColor};
+  background-color: ${({ theme }) => theme.secondColor};
   border-radius: 50%;
 `;
 
@@ -55,7 +54,7 @@ export const Line = styled.span`
   display: block;
   width: 1px;
   height: 100%;
-  background-color: ${colors.secondColor};
+  background-color: ${({ theme }) => theme.secondColor};
   transform: translate(6px, -7px);
   display: ${(props) => (props.active ? '' : 'none')};
 `;

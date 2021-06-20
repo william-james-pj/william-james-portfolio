@@ -1,5 +1,4 @@
 import { createGlobalStyle } from 'styled-components';
-import * as color from '../config/colors';
 import * as fonts from '../config/fonts';
 
 export default createGlobalStyle`
@@ -15,9 +14,7 @@ export default createGlobalStyle`
     body {
         width: 100%;
         height: 100%;
-        background-color: ${color.primaryColor};
-        margin: 0 0 3rem 0;
-
+        background-color: ${({ theme }) => theme.primaryColor};
         font-family: 'Roboto', sans-serif;
         font-size: ${fonts.normalFontSize};
     }
@@ -26,5 +23,16 @@ export default createGlobalStyle`
     }
     a {
       text-decoration: none;
+    }
+    ::-webkit-scrollbar {
+      width: 0.6rem;
+      background-color:  ${({ theme }) => theme.scrollBar};
+      border-radius: 0.5rem;
+    }
+    ::-webkit-scrollbar-thumb {
+      background-color:  ${({ theme }) => theme.scrollThumb};
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background-color:  ${({ theme }) => theme.h2};
     }
 `;

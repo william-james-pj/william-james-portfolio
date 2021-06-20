@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import * as colors from '../../config/colors';
 // import * as fonts from '../../../config/fonts';
 // import { respondToUp } from '../../../config/respondTo';
 
@@ -7,7 +6,7 @@ export const Container = styled.a`
   position: fixed;
   right: 1rem;
   bottom: ${(props) => (props.active ? '5rem' : '-20%')};
-  background-color: ${colors.secondColor};
+  background-color: ${({ theme }) => theme.secondColor};
   opacity: 0.8;
   padding: 0.3rem 0.6rem;
   border-radius: 0.4rem;
@@ -16,12 +15,12 @@ export const Container = styled.a`
   cursor: pointer;
 
   :hover {
-    background-color: ${colors.thirdColor};
+    background-color: ${({ theme }) => theme.secondColorAlt};
   }
 `;
 
 export const Icon = styled.span`
   font-size: 1.5rem;
-  color: ${colors.primaryColor};
+  color: ${({ theme }) => theme.primaryColor};
   -webkit-tap-highlight-color: transparent;
 `;

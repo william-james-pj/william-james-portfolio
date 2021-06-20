@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import * as colors from '../../config/colors';
 import * as fonts from '../../config/fonts';
 import { respondToDown, respondToUp } from '../../config/respondTo';
 
@@ -19,7 +18,7 @@ export const ImgContainer = styled.div`
   width: 90%;
   height: auto;
   border-radius: 0.5rem;
-  background: ${colors.textPrimaryColor};
+  background: ${({ theme }) => theme.h1};
   margin-inline: auto;
 `;
 
@@ -42,7 +41,7 @@ export const Data = styled.div`
 export const Title = styled.p`
   font-size: ${fonts.md};
   font-weight: 700;
-  color: ${colors.textSecondColor};
+  color: ${({ theme }) => theme.h2};
   margin-bottom: 0.5rem;
   user-select: none;
 
@@ -55,7 +54,7 @@ export const Title = styled.p`
 export const Description = styled.p`
   margin-bottom: 1.5rem;
   font-size: ${fonts.normal};
-  color: ${colors.textThirdColor};
+  color: ${({ theme }) => theme.h3};
   line-height: 140%;
   user-select: none;
   ${respondToUp.xs`

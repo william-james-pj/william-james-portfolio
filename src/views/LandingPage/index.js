@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import PropTypes from 'prop-types';
 
 import Nav from './Nav';
 import Home from './Home';
@@ -10,7 +11,7 @@ import Blog from './Blog';
 import Footer from './Footer';
 import ScrollUp from '../../components/ScrollUp';
 
-function LandingPage() {
+function LandingPage({ themeToggler, theme }) {
   const [activeScroll, setActiveScroll] = useState(false);
   const [activeScrollUp, setActiveScrollUp] = useState(false);
 
@@ -31,7 +32,7 @@ function LandingPage() {
 
   return (
     <>
-      <Nav scroll={activeScroll} />
+      <Nav scroll={activeScroll} themeToggler={themeToggler} theme={theme} />
       <Home />
       <About />
       <Blog />
@@ -43,5 +44,10 @@ function LandingPage() {
     </>
   );
 }
+
+LandingPage.propTypes = {
+  themeToggler: PropTypes.func.isRequired,
+  theme: PropTypes.string.isRequired,
+};
 
 export default LandingPage;

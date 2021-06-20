@@ -11,6 +11,7 @@ import {
   faImage,
   faThLarge,
   faMoon,
+  faSun,
 } from '@fortawesome/free-solid-svg-icons';
 
 import {
@@ -28,7 +29,7 @@ import {
   IconTheme,
 } from './styles';
 
-function Nav({ scroll }) {
+function Nav({ scroll, themeToggler, theme }) {
   const [menuOpen, setMenuOpen] = useState(false);
 
   const handleMenu = () => {
@@ -88,8 +89,11 @@ function Nav({ scroll }) {
         </NavMenu>
 
         <NavBtns>
-          <IconTheme>
-            <FontAwesomeIcon icon={faMoon} size="sm" />
+          <IconTheme onClick={themeToggler}>
+            <FontAwesomeIcon
+              icon={theme === 'light' ? faMoon : faSun}
+              size="sm"
+            />
           </IconTheme>
 
           <NavToggle onClick={handleMenu}>
@@ -103,6 +107,8 @@ function Nav({ scroll }) {
 
 Nav.propTypes = {
   scroll: PropTypes.bool.isRequired,
+  themeToggler: PropTypes.func.isRequired,
+  theme: PropTypes.string.isRequired,
 };
 
 export default Nav;

@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import * as colors from '../../../config/colors';
 import * as fonts from '../../../config/fonts';
 import { respondToUp } from '../../../config/respondTo';
 
@@ -12,7 +11,7 @@ export const Container = styled.div`
 `;
 
 export const Title = styled.p`
-  color: ${colors.textPrimaryColor};
+  color: ${({ theme }) => theme.h1};
   font-size: ${fonts.lg};
   font-weight: 700;
   text-align: center;

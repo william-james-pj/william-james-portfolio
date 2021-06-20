@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import * as colors from '../../../config/colors';
 import * as fonts from '../../../config/fonts';
 import { respondToDown, respondToUp } from '../../../config/respondTo';
 
@@ -12,7 +11,7 @@ export const Container = styled.div`
 `;
 
 export const AboutTitle = styled.p`
-  color: ${colors.textPrimaryColor};
+  color: ${({ theme }) => theme.h1};
   font-size: ${fonts.lg};
   font-weight: 700;
   text-align: center;
@@ -46,7 +45,7 @@ export const ImgContainer = styled.div`
   width: 200px;
   height: 200px;
   border-radius: 0.5rem;
-  background: ${colors.textPrimaryColor};
+  background: ${({ theme }) => theme.h1};
   margin-inline: auto;
 
   ${respondToDown.xs`
@@ -68,7 +67,7 @@ export const AboutDescription = styled.p`
   text-align: center;
   margin-bottom: 2.5rem;
   font-size: ${fonts.normal};
-  color: ${colors.textSecondColor};
+  color: ${({ theme }) => theme.h2};
   line-height: 140%;
   user-select: none;
   ${respondToUp.xs`
@@ -91,8 +90,8 @@ export const AboutButtonLink = styled.a`
   display: inline-flex;
   align-items: center;
 
-  background-color: ${colors.secondColor};
-  color: ${colors.white};
+  background-color: ${({ theme }) => theme.secondColor};
+  color: ${({ theme }) => theme.white};
   padding: 1rem;
   border-radius: 0.5rem;
   font-weight: 500;
@@ -100,7 +99,7 @@ export const AboutButtonLink = styled.a`
   user-select: none;
 
   :hover {
-    background-color: ${colors.thirdColor};
+    background-color: ${({ theme }) => theme.secondColorAlt};
   }
 `;
 

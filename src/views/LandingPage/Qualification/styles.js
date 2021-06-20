@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import * as colors from '../../../config/colors';
 import * as fonts from '../../../config/fonts';
 import { respondToUp } from '../../../config/respondTo';
 
@@ -12,7 +11,7 @@ export const Container = styled.div`
 `;
 
 export const Title = styled.p`
-  color: ${colors.textPrimaryColor};
+  color: ${({ theme }) => theme.h1};
   font-size: ${fonts.lg};
   font-weight: 700;
   text-align: center;
@@ -49,12 +48,12 @@ export const Button = styled.div`
   font-weight: 700;
   cursor: pointer;
   color: ${(props) =>
-    props.active ? colors.textSecondColor : colors.secondColor};
+    props.active ? ({ theme }) => theme.h2 : ({ theme }) => theme.secondColor};
 
   -webkit-tap-highlight-color: transparent;
 
   :hover {
-    color: ${colors.secondColor};
+    color: ${({ theme }) => theme.secondColor};
   }
 `;
 
