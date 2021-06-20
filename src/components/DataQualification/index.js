@@ -42,7 +42,7 @@ function DataQualification({ data, right, last }) {
 DataQualification.propTypes = {
   data: PropTypes.object.isRequired,
   right: PropTypes.number.isRequired,
-  last: PropTypes.number.isRequired,
+  last: PropTypes.bool.isRequired,
 };
 
 export default DataQualification;

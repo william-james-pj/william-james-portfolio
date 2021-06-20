@@ -10,6 +10,9 @@ export const Container = styled.div`
   z-index: 99;
   background: ${colors.primaryColor};
 
+  box-shadow: ${(props) =>
+    props.active ? '0 -1px 4px rgba(0,0,0,0.15)' : 'none'};
+
   ${respondToUp.sm`
     top: 0;
   `}
@@ -136,7 +139,10 @@ export const NavClose = styled.div`
   `}
 `;
 
-export const NavBtns = styled.div``;
+export const NavBtns = styled.div`
+  display: flex;
+  align-items: center;
+`;
 
 export const NavToggle = styled.div`
   font-weight: 500;
@@ -153,4 +159,16 @@ export const NavToggle = styled.div`
   ${respondToUp.sm`
       display: none;
   `}
+`;
+
+export const IconTheme = styled.span`
+  font-size: 1.25rem;
+  color: ${colors.textPrimaryColor};
+  margin-right: 1rem;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+
+  :hover {
+    color: ${colors.secondColor};
+  }
 `;

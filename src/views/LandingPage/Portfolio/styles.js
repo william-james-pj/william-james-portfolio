@@ -26,11 +26,14 @@ export const Title = styled.p`
 
 export const PortfolioContainer = styled.div`
   max-width: 768px;
-  margin-left: 1.5rem;
-  margin-right: 1.5rem;
+  margin-inline: 1.5rem;
+
+  ${respondToUp.sm`
+    margin-inline: auto;
+    padding-inline: 3rem;
+  `}
 
   ${respondToUp.md`
-    margin-left: auto;
-    margin-right: auto;
+    padding: 0;
   `}
 `;

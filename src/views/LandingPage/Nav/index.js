@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import PropTypes from 'prop-types';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
@@ -9,6 +10,7 @@ import {
   faFileCode,
   faImage,
   faThLarge,
+  faMoon,
 } from '@fortawesome/free-solid-svg-icons';
 
 import {
@@ -23,9 +25,10 @@ import {
   NavClose,
   NavBtns,
   NavToggle,
+  IconTheme,
 } from './styles';
 
-function Nav() {
+function Nav({ scroll }) {
   const [menuOpen, setMenuOpen] = useState(false);
 
   const handleMenu = () => {
@@ -33,7 +36,7 @@ function Nav() {
   };
 
   return (
-    <Container>
+    <Container active={scroll}>
       <NavContainer>
         <NavLogo>William James</NavLogo>
         <NavMenu menuOpen={menuOpen}>
@@ -85,6 +88,10 @@ function Nav() {
         </NavMenu>
 
         <NavBtns>
+          <IconTheme>
+            <FontAwesomeIcon icon={faMoon} size="sm" />
+          </IconTheme>
+
           <NavToggle onClick={handleMenu}>
             <FontAwesomeIcon icon={faGripHorizontal} size="lg" />
           </NavToggle>
@@ -93,5 +100,9 @@ function Nav() {
     </Container>
   );
 }
+
+Nav.propTypes = {
+  scroll: PropTypes.bool.isRequired,
+};
 
 export default Nav;
