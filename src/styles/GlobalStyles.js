@@ -1,5 +1,6 @@
 import { createGlobalStyle } from 'styled-components';
 import * as fonts from '../config/fonts';
+import * as variables from '../config/variables';
 
 export default createGlobalStyle`
     * {
@@ -17,12 +18,17 @@ export default createGlobalStyle`
         background-color: ${({ theme }) => theme.primaryColor};
         font-family: 'Roboto', sans-serif;
         font-size: ${fonts.normalFontSize};
+        transition: ${variables.delay};
     }
     ul {
       list-style: none;
     }
     a {
       text-decoration: none;
+      transition: ${variables.delay};
+    }
+    p, span {
+      transition: ${variables.delay};
     }
     ::-webkit-scrollbar {
       width: 0.6rem;

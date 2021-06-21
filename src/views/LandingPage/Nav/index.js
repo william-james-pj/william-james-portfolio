@@ -39,19 +39,19 @@ function Nav({ scroll, themeToggler, theme }) {
   return (
     <Container active={scroll}>
       <NavContainer>
-        <NavLogo>William James</NavLogo>
+        <NavLogo to="/#home">William James</NavLogo>
         <NavMenu menuOpen={menuOpen}>
           <NavList>
             <NavItem onClick={handleMenu}>
-              <NavLink>
+              <NavLink to="/#home">
                 <NavIcons>
                   <FontAwesomeIcon icon={faHome} size="lg" />
                 </NavIcons>
-                Menu
+                Home
               </NavLink>
             </NavItem>
             <NavItem onClick={handleMenu}>
-              <NavLink>
+              <NavLink to="/#about">
                 <NavIcons>
                   <FontAwesomeIcon icon={faUser} size="lg" />
                 </NavIcons>
@@ -59,7 +59,7 @@ function Nav({ scroll, themeToggler, theme }) {
               </NavLink>
             </NavItem>
             <NavItem onClick={handleMenu}>
-              <NavLink>
+              <NavLink to="/#blog">
                 <NavIcons>
                   <FontAwesomeIcon icon={faThLarge} size="lg" />
                 </NavIcons>
@@ -67,7 +67,7 @@ function Nav({ scroll, themeToggler, theme }) {
               </NavLink>
             </NavItem>
             <NavItem onClick={handleMenu}>
-              <NavLink>
+              <NavLink to="/#skills">
                 <NavIcons>
                   <FontAwesomeIcon icon={faFileCode} size="lg" />
                 </NavIcons>
@@ -75,7 +75,7 @@ function Nav({ scroll, themeToggler, theme }) {
               </NavLink>
             </NavItem>
             <NavItem onClick={handleMenu}>
-              <NavLink>
+              <NavLink to="/#portfolio">
                 <NavIcons>
                   <FontAwesomeIcon icon={faImage} size="lg" />
                 </NavIcons>

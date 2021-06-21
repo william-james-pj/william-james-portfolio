@@ -1,6 +1,8 @@
 import styled from 'styled-components';
 import * as fonts from '../../../config/fonts';
 import { respondToDown, respondToUp } from '../../../config/respondTo';
+import { HashLink } from 'react-router-hash-link';
+import * as variables from '../../../config/variables';
 
 export const Container = styled.div`
   width: 100%;
@@ -8,6 +10,7 @@ export const Container = styled.div`
   left: 0;
   z-index: 99;
   background: ${({ theme }) => theme.primaryColor};
+  transition: ${variables.delay};
 
   box-shadow: ${(props) =>
     props.active ? '0 -1px 4px rgba(0,0,0,0.15)' : 'none'};
@@ -42,7 +45,7 @@ export const NavContainer = styled.div`
   `}
 `;
 
-export const NavLogo = styled.a`
+export const NavLogo = styled(HashLink)`
   font-weight: 500;
   color: ${({ theme }) => theme.h1};
   cursor: pointer;
@@ -104,7 +107,7 @@ export const NavIcons = styled.div`
   `}
 `;
 
-export const NavLink = styled.a`
+export const NavLink = styled(HashLink)`
   display: flex;
   flex-direction: column;
   align-items: center;

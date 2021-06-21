@@ -21,32 +21,22 @@ import {
 
 const education = [
   {
-    title: 'Computer Enginner',
-    where: 'University',
-    date: '2009 - 2014',
+    title: 'Técnico de Informática',
+    where: 'ETEC São Roque',
+    date: '2018 - 2019',
   },
   {
-    title: 'Computer',
-    where: 'University',
-    date: '2009 - 2014',
-  },
-  {
-    title: 'Computer',
-    where: 'University',
-    date: '2009 - 2014',
+    title: 'Engenharia de Computação',
+    where: 'Facens',
+    date: '2020 - 2025',
   },
 ];
 
 const work = [
   {
-    title: 'Computer',
-    where: 'University',
-    date: '2009 - 2014',
-  },
-  {
-    title: 'Computer',
-    where: 'University',
-    date: '2009 - 2014',
+    title: 'A procura da primeira oportunidade',
+    where: '',
+    date: '~',
   },
 ];
 

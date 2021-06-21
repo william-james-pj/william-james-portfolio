@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import * as fonts from '../../../config/fonts';
 import { respondToDown, respondToUp } from '../../../config/respondTo';
+import { HashLink } from 'react-router-hash-link';
 
 export const Container = styled.div`
   padding: 2rem 0 4rem;
@@ -76,7 +77,9 @@ export const HomeBlob = styled.svg`
   `}
 `;
 
-export const HomeBlobImg = styled.div``;
+export const HomeBlobImg = styled.image`
+  width: 140px;
+`;
 
 export const HomeData = styled.div`
   grid-column: 1/3;
@@ -115,7 +118,7 @@ export const HomeScroll = styled.div`
   `}
 `;
 
-export const HomeScrollButton = styled.a`
+export const HomeScrollButton = styled(HashLink)`
   color: ${({ theme }) => theme.secondColor};
   transition: 0.3s;
   cursor: pointer;

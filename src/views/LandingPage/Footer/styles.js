@@ -1,6 +1,8 @@
 import styled from 'styled-components';
 import * as fonts from '../../../config/fonts';
 import { respondToUp } from '../../../config/respondTo';
+import { HashLink } from 'react-router-hash-link';
+import * as variables from '../../../config/variables';
 
 export const Container = styled.div`
   padding-top: 2rem;
@@ -8,6 +10,7 @@ export const Container = styled.div`
 
 export const FooterBg = styled.div`
   background-color: ${({ theme }) => theme.containerColor};
+  transition: ${variables.delay};
   padding: 2rem 0 3rem;
 
   ${respondToUp.sm`
@@ -44,11 +47,13 @@ export const Title = styled.p`
   font-size: ${fonts.normal};
   margin-bottom: 0.25rem;
   color: ${({ theme }) => theme.white};
+  user-select: none;
 `;
 
 export const Subtitle = styled.span`
   font-size: ${fonts.sm};
   color: ${({ theme }) => theme.white};
+  user-select: none;
 `;
 
 export const Links = styled.ul`
@@ -64,10 +69,11 @@ export const Links = styled.ul`
 
 export const Item = styled.li``;
 
-export const Link = styled.a`
+export const Link = styled(HashLink)`
   color: ${({ theme }) => theme.white};
+  -webkit-tap-highlight-color: transparent;
   :hover {
-    color: ${({ theme }) => theme.secondColorAlt};
+    opacity: 0.5;
   }
 `;
 
@@ -79,13 +85,14 @@ export const Socials = styled.div`
   `}
 `;
 
-export const Social = styled.div`
+export const Social = styled.a`
   font-size: 1.25rem;
   margin-right: 1.5rem;
   color: ${({ theme }) => theme.white};
+  -webkit-tap-highlight-color: transparent;
 
   :hover {
-    color: ${({ theme }) => theme.secondColorAlt};
+    opacity: 0.5;
   }
 `;
 
@@ -94,6 +101,7 @@ export const Copy = styled.p`
   text-align: center;
   color: ${({ theme }) => theme.white};
   margin-top: 3rem;
+  user-select: none;
 
   ${respondToUp.sm`
     margin-top: 4.5rem;

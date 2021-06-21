@@ -1,4 +1,5 @@
 import React from 'react';
+import { BrowserRouter } from 'react-router-dom';
 import GlobalStyles from './styles/GlobalStyles';
 
 import { ThemeProvider } from 'styled-components';
@@ -16,10 +17,10 @@ function App() {
 
   return (
     <ThemeProvider theme={themeMode}>
-      <>
+      <BrowserRouter>
         <LandingPage themeToggler={themeToggler} theme={theme} />
         <GlobalStyles />
-      </>
+      </BrowserRouter>
     </ThemeProvider>
   );
 }

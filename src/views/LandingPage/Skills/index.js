@@ -1,6 +1,10 @@
 import React from 'react';
 
-import { faLaptopCode, faDatabase } from '@fortawesome/free-solid-svg-icons';
+import {
+  faLaptopCode,
+  faDatabase,
+  faTerminal,
+} from '@fortawesome/free-solid-svg-icons';
 
 import List from '../../../components/List/index';
 
@@ -19,7 +23,11 @@ const data = {
     },
     {
       name: 'JS',
-      number: '90%',
+      number: '80%',
+    },
+    {
+      name: 'Reactjs',
+      number: '60%',
     },
   ],
 };
@@ -28,15 +36,25 @@ const data1 = {
   title: 'Backend',
   list: [
     {
-      name: 'Firebase',
-      number: '90%',
-    },
-    {
       name: 'Nodejs',
-      number: '70%',
+      number: '50%',
+    },
+  ],
+};
+
+const data2 = {
+  title: 'DataBase',
+  list: [
+    {
+      name: 'Firebase',
+      number: '60%',
     },
     {
       name: 'MySQL',
+      number: '70%',
+    },
+    {
+      name: 'MongoDB',
       number: '50%',
     },
   ],
@@ -44,11 +62,12 @@ const data1 = {
 
 function Skills() {
   return (
-    <Container>
+    <Container id="skills">
       <Title>Skills</Title>
       <SkillsContainer>
         <List data={data} icon={faLaptopCode} />
-        <List data={data1} icon={faDatabase} />
+        <List data={data1} icon={faTerminal} />
+        <List data={data2} icon={faDatabase} />
       </SkillsContainer>
     </Container>
   );

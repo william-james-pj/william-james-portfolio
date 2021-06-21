@@ -33,23 +33,29 @@ function Footer() {
           </Data>
           <Links>
             <Item>
-              <Link>Home</Link>
+              <Link to="/#home">Home</Link>
             </Item>
             <Item>
-              <Link>Blog</Link>
+              <Link to="/#blog">Blog</Link>
             </Item>
             <Item>
-              <Link>Portfolio</Link>
+              <Link to="/#portfolio">Portfolio</Link>
             </Item>
           </Links>
           <Socials>
-            <Social>
+            <Social target="_blank" href="https://github.com/william-james-pj">
               <FontAwesomeIcon icon={faGithub} size="1x" />
             </Social>
-            <Social>
+            <Social
+              target="_blank"
+              href="https://www.linkedin.com/in/william-james-pj/"
+            >
               <FontAwesomeIcon icon={faLinkedin} size="1x" />
             </Social>
-            <Social>
+            <Social
+              target="_blank"
+              href="https://www.instagram.com/william._.james/"
+            >
               <FontAwesomeIcon icon={faInstagram} size="1x" />
             </Social>
           </Socials>

@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import * as fonts from '../../../config/fonts';
-import { respondToDown, respondToUp } from '../../../config/respondTo';
+import { respondToUp } from '../../../config/respondTo';
 
 export const Container = styled.div`
   padding: 2rem 0 4rem;
@@ -41,22 +41,9 @@ export const AboutContainer = styled.div`
   `}
 `;
 
-export const ImgContainer = styled.div`
-  width: 200px;
-  height: 200px;
-  border-radius: 0.5rem;
-  background: ${({ theme }) => theme.h1};
-  margin-inline: auto;
-
-  ${respondToDown.xs`
-    margin-inline: auto;
-  `}
-`;
-
 export const AboutImg = styled.img`
-  max-width: 100%;
-  height: auto;
-
+  width: 300px;
+  border-radius: 0.5rem;
   justify-self: center;
   align-self: center;
 `;
@@ -66,9 +53,9 @@ export const AboutData = styled.div``;
 export const AboutDescription = styled.p`
   text-align: center;
   margin-bottom: 2.5rem;
-  font-size: ${fonts.normal};
+  font-size: 18px;
   color: ${({ theme }) => theme.h2};
-  line-height: 140%;
+  line-height: 160%;
   user-select: none;
   ${respondToUp.xs`
     text-align: left;

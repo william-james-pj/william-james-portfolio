@@ -8,7 +8,7 @@ import { Container, Icon } from './styles';
 
 function ScrollUp({ scroll }) {
   return (
-    <Container active={scroll}>
+    <Container active={scroll} to="/#home">
       <Icon>
         <FontAwesomeIcon icon={faArrowUp} size="sm" />
       </Icon>

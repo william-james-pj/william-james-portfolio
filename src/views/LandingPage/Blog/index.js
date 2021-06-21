@@ -6,7 +6,7 @@ import BlogItem from '../../../components/BlogItem';
 
 function Blog() {
   return (
-    <Container>
+    <Container id="blog">
       <Title>Blog</Title>
       <BlogContainer>
         <BlogItem />

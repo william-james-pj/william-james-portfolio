@@ -1,8 +1,9 @@
 import styled from 'styled-components';
 // import * as fonts from '../../../config/fonts';
 // import { respondToUp } from '../../../config/respondTo';
+import { HashLink } from 'react-router-hash-link';
 
-export const Container = styled.a`
+export const Container = styled(HashLink)`
   position: fixed;
   right: 1rem;
   bottom: ${(props) => (props.active ? '5rem' : '-20%')};
