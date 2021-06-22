@@ -11,6 +11,10 @@ export const Container = styled.div`
 export const Icon = styled.span`
   font-size: 2.5rem;
   color: ${({ theme }) => theme.secondColor};
-  cursor: pointer;
+  color: ${(props) =>
+    props.disabled
+      ? ({ theme }) => theme.scrollBar
+      : ({ theme }) => theme.secondColor};
+  cursor: ${(props) => (props.disabled ? 'none' : 'pointer')};
   -webkit-tap-highlight-color: transparent;
 `;

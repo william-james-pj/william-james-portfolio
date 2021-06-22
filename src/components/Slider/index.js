@@ -15,17 +15,26 @@ function Slider() {
     <Container>
       <Carousel
         plugins={[
-          'infinite',
           {
             resolve: arrowsPlugin,
             options: {
               arrowLeft: (
-                <Icon>
+                <Icon disabled={0}>
+                  <FontAwesomeIcon icon={faAngleLeft} size="1x" />
+                </Icon>
+              ),
+              arrowLeftDisabled: (
+                <Icon disabled={1}>
                   <FontAwesomeIcon icon={faAngleLeft} size="1x" />
                 </Icon>
               ),
               arrowRight: (
-                <Icon>
+                <Icon disabled={0}>
+                  <FontAwesomeIcon icon={faAngleRight} size="1x" />
+                </Icon>
+              ),
+              arrowRightDisabled: (
+                <Icon disabled={1}>
                   <FontAwesomeIcon icon={faAngleRight} size="1x" />
                 </Icon>
               ),
