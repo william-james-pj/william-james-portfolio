@@ -3,28 +3,33 @@ import * as fonts from '../../config/fonts';
 import { respondToDown, respondToUp } from '../../config/respondTo';
 
 export const Container = styled.div`
-  width: auto;
-  height: 100%;
+  max-width: 400px;
+  height: auto;
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 1fr 1.2fr;
+  grid-template-rows: 0.8fr 1.2fr;
+  cursor: pointer;
 
   ${respondToUp.sm`
-    grid-template-rows: 1.2fr 0.8fr;
+    grid-template-rows: 1fr 1fr;
   `}
 `;
 
 export const ImgContainer = styled.div`
-  width: 90%;
+  width: 100%;
   height: auto;
-  border-radius: 0.5rem;
-  background: ${({ theme }) => theme.h1};
   margin-inline: auto;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
 `;
 
 export const Img = styled.img`
-  max-width: 100%;
+  width: 70%;
   height: auto;
+
+  border-radius: 0.5rem;
 
   justify-self: center;
   align-self: center;
@@ -33,7 +38,7 @@ export const Img = styled.img`
 export const Data = styled.div`
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
 
   padding: 1.2rem;
 `;
@@ -57,6 +62,13 @@ export const Description = styled.p`
   color: ${({ theme }) => theme.h3};
   line-height: 140%;
   user-select: none;
+
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+
   ${respondToUp.xs`
     text-align: left;
   `}

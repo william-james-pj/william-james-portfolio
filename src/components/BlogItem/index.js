@@ -1,20 +1,22 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
-import { Container, ImgContainer, Data, Title, Description } from './styles';
+import { Container, Data, Title, Description, Img } from './styles';
 
-function BlogItem() {
+function BlogItem({ data }) {
   return (
     <Container>
-      <ImgContainer></ImgContainer>
+      <Img src={data.thumbnail} />
       <Data>
-        <Title>POST</Title>
-        <Description>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis
-          purus quis mauris
-        </Description>
+        <Title>{data.title}</Title>
+        <Description>{data.description}</Description>
       </Data>
     </Container>
   );
 }
+
+BlogItem.propTypes = {
+  data: PropTypes.object.isRequired,
+};
 
 export default BlogItem;
