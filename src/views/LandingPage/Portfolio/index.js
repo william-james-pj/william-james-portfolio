@@ -1,4 +1,6 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import { db, storage } from '../../../services/firestore';
+
 import SliderItem from '../../../components/SliderItem';
 
 import {
@@ -9,45 +11,74 @@ import {
   ButtonLink,
 } from './styles';
 
-import img1 from '../../../assets/img/Portfolio/viali.png';
-import img2 from '../../../assets/img/Portfolio/cinelalune.png';
-
-const data = [
-  {
-    title: 'ViALi',
-    description:
-      'Viali é um site onde você irá encontrar jogos, podcasts e mapas mentais sobre alguns temas biológicos.',
-    demo: 'https://vialiofficial.web.app',
-    link: 'https://github.com/william-james-pj/viali',
-    img: img1,
-  },
-  {
-    title: 'CinelaLune',
-    description:
-      'Projeto elaborado para a conclusão de curso (TCC). Tem como objetivo enriquecer a bagagem cutural da população',
-    demo: 'https://william-james-pj.github.io/CinelaLune/',
-    link: 'https://github.com/william-james-pj/CinelaLune',
-    img: img2,
-  },
-];
-
 function Portfolio() {
   const [maxItems, setMaxItems] = useState(4);
+  const [isLoading, setLoading] = useState(true);
+  const [firebaseData, setFirebaseData] = useState([]);
 
   const handle = () => {
     setMaxItems(maxItems + 2);
   };
 
+  const fetchData = async () => {
+    try {
+      let items = [];
+      const response = db.collection('Portfolio');
+      const data = await response.get();
+      await data.docs.forEach((documentSnapshot) => {
+        items.push({
+          title: documentSnapshot.data().title,
+          description: documentSnapshot.data().description,
+          demo: documentSnapshot.data().demo,
+          link: documentSnapshot.data().link,
+          img: documentSnapshot.data().img,
+        });
+      });
+      await fetchImg(items);
+      setFirebaseData(items);
+      setLoading(false);
+    } catch (error) {
+      setLoading(true);
+      console.log(error);
+    }
+  };
+
+  const fetchImg = async (items) => {
+    try {
+      await Promise.all(
+        items.map(async (item) => {
+          let starsRef = storage.ref('Portfolio/' + item.img);
+          await starsRef
+            .getDownloadURL()
+            .then((url) => {
+              item.img = url;
+            })
+            .catch(() => {
+              return null;
+            });
+        }),
+      );
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  useEffect(() => {
+    fetchData();
+  }, []);
+
+  if (isLoading) return <Container></Container>;
+
   return (
     <Container id="portfolio">
       <Title>Portfolio</Title>
       <PortfolioContainer>
-        {data.slice(0, maxItems).map((item, index) => {
+        {firebaseData.slice(0, maxItems).map((item, index) => {
           return <SliderItem item={item} key={item.title + index} />;
         })}
       </PortfolioContainer>
       <Button>
-        {maxItems <= data.length ? (
+        {maxItems <= firebaseData.length ? (
           <ButtonLink onClick={handle}>Mostrar mais</ButtonLink>
         ) : null}
       </Button>
