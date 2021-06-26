@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowUp } from '@fortawesome/free-solid-svg-icons';
@@ -6,7 +7,7 @@ import { faGithubSquare } from '@fortawesome/free-brands-svg-icons';
 
 import {
   Container,
-  ImgContainer,
+  Img,
   Data,
   Title,
   Description,
@@ -16,24 +17,21 @@ import {
   Icon,
 } from './styles';
 
-function SliderItem() {
+function SliderItem({ item }) {
   return (
     <Container>
-      <ImgContainer></ImgContainer>
+      <Img src={item.img} />
       <Data>
-        <Title>Projeto</Title>
-        <Description>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis
-          purus quis mauris
-        </Description>
+        <Title>{item.title}</Title>
+        <Description>{item.description}</Description>
         <Button>
-          <ButtonLink download="">
+          <ButtonLink target="_blank" href={item.demo}>
             Demo
             <ButtonIcon>
               <FontAwesomeIcon icon={faArrowUp} size="sm" />
             </ButtonIcon>
           </ButtonLink>
-          <Icon>
+          <Icon target="_blank" href={item.link}>
             <FontAwesomeIcon icon={faGithubSquare} size="1x" />
           </Icon>
         </Button>
@@ -41,5 +39,9 @@ function SliderItem() {
     </Container>
   );
 }
+
+SliderItem.propTypes = {
+  item: PropTypes.object.isRequired,
+};
 
 export default SliderItem;

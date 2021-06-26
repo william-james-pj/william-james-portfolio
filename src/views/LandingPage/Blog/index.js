@@ -23,7 +23,7 @@ function Blog() {
           description: item.description.substr(4, 110),
         });
       });
-      setdataBlog([items[2], items[1]]);
+      setdataBlog(items);
       setLoading(false);
     } catch (error) {
       console.log(error);

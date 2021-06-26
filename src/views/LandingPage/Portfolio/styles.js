@@ -25,7 +25,12 @@ export const Title = styled.p`
 
 export const PortfolioContainer = styled.div`
   max-width: 768px;
-  margin-inline: 1.5rem;
+  margin-inline: 1rem;
+
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  row-gap: 2rem;
+  justify-items: center;
 
   ${respondToUp.sm`
     margin-inline: auto;
@@ -35,4 +40,29 @@ export const PortfolioContainer = styled.div`
   ${respondToUp.md`
     padding: 0;
   `}
+`;
+
+export const Button = styled.div`
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+`;
+
+export const ButtonLink = styled.a`
+  margin-top: 3rem;
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+
+  background-color: ${({ theme }) => theme.secondColor};
+  color: ${({ theme }) => theme.white};
+  padding: 1rem;
+  border-radius: 0.5rem;
+  font-weight: 500;
+  -webkit-tap-highlight-color: transparent;
+  user-select: none;
+
+  :hover {
+    background-color: ${({ theme }) => theme.secondColorAlt};
+  }
 `;

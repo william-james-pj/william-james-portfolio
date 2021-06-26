@@ -4,19 +4,20 @@ import { respondToDown, respondToUp } from '../../config/respondTo';
 
 export const Container = styled.div`
   width: auto;
+  max-width: 384px;
   display: grid;
+  grid-template-rows: 0.9fr 1.1fr;
   grid-template-columns: 1fr;
-  grid-template-rows: 0.8fr 1.2fr;
   overflow: hidden;
 
   ${respondToUp.xs`
-    grid-template-columns: 0.9fr 1.1fr;
-    grid-template-rows: 1fr;
+    grid-template-rows: 0.9fr 1.1fr;
+    grid-template-columns: 1fr;
   `}
 `;
 
 export const ImgContainer = styled.div`
-  width: 70%;
+  width: 80%;
   height: auto;
   border-radius: 0.5rem;
   background: ${({ theme }) => theme.h1};
@@ -29,8 +30,10 @@ export const ImgContainer = styled.div`
 `;
 
 export const Img = styled.img`
-  max-width: 100%;
+  width: 70%;
   height: auto;
+
+  border-radius: 0.5rem;
 
   justify-self: center;
   align-self: center;
@@ -41,7 +44,10 @@ export const Data = styled.div`
   flex-direction: column;
   justify-content: center;
 
-  padding-inline: 1rem;
+  justify-self: center;
+
+  width: 80%;
+  padding-top: 1rem;
 `;
 
 export const Title = styled.p`
@@ -63,6 +69,13 @@ export const Description = styled.p`
   color: ${({ theme }) => theme.h3};
   line-height: 140%;
   user-select: none;
+
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+
   ${respondToUp.xs`
     text-align: left;
   `}
@@ -97,7 +110,7 @@ export const ButtonLink = styled.a`
   }
 `;
 
-export const Icon = styled.span`
+export const Icon = styled.a`
   font-size: 2.25rem;
   color: ${({ theme }) => theme.secondColorAlt};
   margin-left: 2rem;
