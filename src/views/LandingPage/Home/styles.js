@@ -4,10 +4,10 @@ import { respondToDown, respondToUp } from '../../../config/respondTo';
 import { HashLink } from 'react-router-hash-link';
 
 export const Container = styled.div`
-  padding: 2rem 0 4rem;
+  padding: 3rem 0 4rem;
 
   ${respondToUp.sm`
-    padding: 6rem 0 4rem;
+    padding: 4rem 0 4rem;
   `}
 `;
 
@@ -73,7 +73,7 @@ export const HomeBlob = styled.svg`
   `}
 
   ${respondToUp.md`
-    width: 320px;
+    width: 360px;
   `}
 `;
 
