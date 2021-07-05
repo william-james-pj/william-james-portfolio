@@ -29,6 +29,7 @@
 <br />
 Este projeto foi construído com a intenção de ser meu portfólio.
 
+
 [Visualizar meu portfólio](https://williamjames-official.web.app/).
 
 ### Construído com
@@ -37,12 +38,6 @@ O projeto foi construído utilizando
 
 - [Reactjs](https://reactjs.org)
 - [Firebase](https://firebase.google.com)
-
-# Começando
-
-Para obter uma cópia local desse repositório, siga estas etapas.
-
-
 
 ## Licença
 
