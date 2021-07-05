@@ -24,11 +24,10 @@
 
 ## Sobre o projeto
 
-![Screenshot](.github/cover.svg)
+![Screenshot](.github/cover.png)
 
 <br />
 Este projeto foi construído com a intenção de ser meu portfólio.
-
 
 [Visualizar meu portfólio](https://williamjames-official.web.app/).
 
