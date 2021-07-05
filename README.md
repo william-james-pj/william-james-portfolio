@@ -17,13 +17,6 @@
         <li><a href="#construido-com">Construido com</a></li>
       </ul>
     </li>
-    <li>
-      <a href="#começando">Começando</a>
-      <ul>
-        <li><a href="#pre-requisitos">Pré-requisitos</a></li>
-        <li><a href="#instalação">instalação</a></li>
-      </ul>
-    </li>
     <li><a href="#licença">Licença</a></li>
     <li><a href="#contato">Contato</a></li>
   </ol>
