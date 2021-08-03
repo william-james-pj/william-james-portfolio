@@ -31,7 +31,10 @@ function About() {
             full stack.
           </AboutDescription>
           <AboutButton>
-            <AboutButtonLink download="">
+            <AboutButtonLink
+              download=""
+              href="../../../assets/CV_WilliamJames_FrontEnd.pdf"
+            >
               Download CV
               <AboutButtonIcon>
                 <FontAwesomeIcon icon={faFileDownload} size="sm" />

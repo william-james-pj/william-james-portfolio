@@ -76,6 +76,7 @@ export const AboutButtonIcon = styled.span`
 export const AboutButtonLink = styled.a`
   display: inline-flex;
   align-items: center;
+  cursor: pointer;
 
   background-color: ${({ theme }) => theme.secondColor};
   color: ${({ theme }) => theme.white};
